@@ -1,11 +1,10 @@
 FROM golang
 
-RUN mkdir -p /src
+# Copiando o hello.go da sua máquina para o container na pasta raz /
+COPY /hello.go /
 
-COPY . /src
+# Rodando build
+RUN go build /hello.go
 
-WORKDIR /src
-
-RUN go build -o hello.go
-
-ENTRYPOINT ["/src/hello"]
+# Executando
+ENTRYPOINT ["./hello"]
