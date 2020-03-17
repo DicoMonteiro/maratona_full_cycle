@@ -2,10 +2,8 @@
 
     - Realiza o build da aplicação:
 
-    docker build -t adrianobma/hello-world-golang -f Dockerfile .
+    docker build -t adrianobma/hello-world-golang .
 
     - Executa os scripts:
 
-    <!-- docker run -e Hello_World="hello.go" hello-world-golang:latest -->
-
-    docker run --rm -p 8082:8082 adrianobma/hello-world-golang
+    docker run adrianobma/hello-world-golang
